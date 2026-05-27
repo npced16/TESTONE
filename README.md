@@ -13,6 +13,8 @@ npm run dev
 - Metro: http://localhost:8081
 - Android: `npm run android`
 - iOS: `npm run ios`
+- GitHub Pages용 웹 미리보기: `npm run web`
+- GitHub Pages용 정적 빌드: `npm run web:build`
 
 ## 주요 기능
 
@@ -21,6 +23,7 @@ npm run dev
 - Gemini API 직접 호출
 - 핵심 수치 3개, 인사이트, 보고서 초안 생성
 - 백엔드 통신 없음
+- GitHub Pages 정적 배포 지원
 
 ## 검증
 

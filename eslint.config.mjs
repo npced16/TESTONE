@@ -11,8 +11,13 @@ export default [
     languageOptions: {
       globals: {
         ArrayBuffer: "readonly",
+        Blob: "readonly",
         console: "readonly",
+        document: "readonly",
+        File: "readonly",
+        FileReader: "readonly",
         fetch: "readonly",
+        window: "readonly",
         require: "readonly",
         module: "readonly",
         __dirname: "readonly"
