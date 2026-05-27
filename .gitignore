@@ -6,3 +6,12 @@ __pycache__/
 dist/
 *.pyc
 *.tsbuildinfo
+.bundle/
+.gradle/
+android/.gradle/
+android/app/build/
+android/build/
+ios/Pods/
+ios/build/
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/

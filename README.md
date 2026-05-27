@@ -1,25 +1,26 @@
-# Data Insight Converter
+# Data Insight Converter RN
 
-엑셀/CSV/붙여넣기 데이터를 분석해 핵심 수치, 차트, 보고서 초안을 만드는 MVP입니다.
+순수 React Native 기반 프론트엔드 단독 데이터 분석 MVP입니다.
+백엔드 서버 없이 앱에서 엑셀/CSV를 읽고, 사용자가 입력한 Gemini API 키로 Google Gemini API를 직접 호출합니다.
 
 ## 실행
 
 ```powershell
 npm install
-pip install -r requirements.txt
-npm run backend
 npm run dev
 ```
 
-- Frontend: http://localhost:3000
-- Backend: http://localhost:8000
+- Metro: http://localhost:8081
+- Android: `npm run android`
+- iOS: `npm run ios`
 
 ## 주요 기능
 
-- 붙여넣기 텍스트, CSV, XLSX 입력
-- 핵심 수치 3개 자동 추출
-- 막대/선/파이/테이블 차트 미리보기
-- XLSX/PDF/DOCX 파일 내보내기
+- React Native UI
+- XLSX/CSV/붙여넣기 데이터 파싱
+- Gemini API 직접 호출
+- 핵심 수치 3개, 인사이트, 보고서 초안 생성
+- 백엔드 통신 없음
 
 ## 검증
 

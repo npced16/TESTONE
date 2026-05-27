@@ -1,18 +1,37 @@
-import { FlatCompat } from "@eslint/eslintrc";
-import { dirname } from "node:path";
-import { fileURLToPath } from "node:url";
+import js from "@eslint/js";
+import tseslint from "typescript-eslint";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-const compat = new FlatCompat({
-  baseDirectory: __dirname
-});
-
-const eslintConfig = [
+export default [
   {
-    ignores: ["node_modules/**", ".next/**", "next-env.d.ts"]
+    ignores: ["node_modules/**", "dist/**", ".next/**", ".expo/**", "web-build/**"]
   },
-  ...compat.extends("next/core-web-vitals", "next/typescript")
+  js.configs.recommended,
+  ...tseslint.configs.recommended,
+  {
+    languageOptions: {
+      globals: {
+        ArrayBuffer: "readonly",
+        console: "readonly",
+        fetch: "readonly",
+        require: "readonly",
+        module: "readonly",
+        __dirname: "readonly"
+      }
+    }
+  },
+  {
+    files: ["babel.config.js", "metro.config.js"],
+    languageOptions: {
+      sourceType: "commonjs"
+    },
+    rules: {
+      "@typescript-eslint/no-require-imports": "off"
+    }
+  },
+  {
+    files: ["src/lib/insight.ts"],
+    rules: {
+      "@typescript-eslint/no-require-imports": "off"
+    }
+  }
 ];
-
-export default eslintConfig;
